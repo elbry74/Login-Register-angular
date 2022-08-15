@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    font-family: 'Open Sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    --button-color: #5381F8;
+    --text-color: #03014C;
+    --bg-color: #fff;
+}
+/* body{
+ overflow: hidden;
+ background: linear-gradient(
+    to right,
+    #FFFFFF 0%,
+    #FFFFFF 55%,
+      #FCFCFf 55%,
+      #FCFCFf 100% 
+ );
+    
+} */

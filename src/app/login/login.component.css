@@ -1,0 +1,129 @@
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 0 2rem;
+    
+}
+.image{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content:right;
+    align-items: center; 
+   
+}
+.image img{
+    width: 400px;
+}
+.login-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.title-container{
+    max-width: 546.25px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.title-container h2{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33.308px;
+    line-height: 45px;
+    color: #03014C;
+}
+.title-container p{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13.3232px;
+    line-height: 18px;
+    color: #03014C;
+    opacity: 0.6;
+}
+.login-inner-content{
+    width: 400px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+.form-outline{
+    display: flex;
+    flex-direction: row;
+    position:relative;
+    
+}
+
+.form-outline input{
+    width: 100%;
+    height: 65px;
+    background-color: var(--bg-color);
+    display: grid;
+   
+    
+    
+}
+/* 
+.form-outline .fas{
+    align-items: center;
+    text-align: center;
+    line-height: 55px;
+    position: relative;
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-top: 3px;
+}
+.form-outline .uil{
+    text-align: center;
+    align-items: center;
+    line-height: 55px;
+    position: relative;
+    margin-left: 310px;
+    opacity: 0.6;
+    margin-top: 3px;
+    cursor: pointer;
+}
+.form-outline .form-control{
+    font-weight: 600;
+    font-size: 13.3232px;
+    line-height: 18px;
+    opacity: 0.6;
+    position: absolute;
+    padding-left: 45px;
+    
+    
+} */
+.btn{
+    width: 406.36px;
+    height: 65.78px;
+    background: var(--button-color);
+    font-weight: 600;
+    font-size: 14.9886px;
+    line-height: 20px;
+}
+form .acount-text{
+    font-weight: 400;
+    font-size: 13.3232px;
+    line-height: 18px;
+}
+
+@media screen and (max-width: 600px) {
+    
+ img{
+    display: none;
+ }
+ .container{
+    margin-top: 170px;
+    grid-template-columns: 1fr;
+
+}
+.login-content{
+    justify-content: center;
+}
+}
