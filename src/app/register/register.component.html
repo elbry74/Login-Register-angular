@@ -1,0 +1,65 @@
+<div class="container">
+        
+    <div class="container left-side">
+        <div class="image">
+            <img src="../../assets/bg-abstract.png">
+        </div> 
+    </div>
+
+    <div class="container right-side">
+       
+            <div class="login-content">
+                
+            <form [formGroup]="userForm" (ngSubmit)="signUp()">
+                <div class="title-container">
+                    <h2>Create Account</h2>
+                    <p>Follow the instructions to make it easier to register and you will be 
+                        able to explore inside.
+                        </p>
+                </div>
+                <div class="login-inner-content">
+                        <!-- user input -->
+                    <div class="form-outline mb-4">
+                        <i class="fas fa-user"></i>
+                        <input type="email" id="form3Example3" class="form-control"
+                        placeholder="Username" formControlName="username">
+                    </div>
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <i class="fas fa-user"></i>
+                            <input type="email" id="form3Example3" class="form-control"
+                            placeholder="Email" formControlName="email">
+                        </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="form3Example4" class="form-control form-control-lg"
+                        placeholder="Password" formControlName="password">
+                        <i class="uil uil-eye-slash"></i> 
+                    </div>
+
+                </div>
+                <div class="sign-up-button">
+                    <button type="submit" class="btn btn-primary mt-3"[disabled]="userForm.invalid" >Create Account</button>
+                    <!-- (click)="submit()" -->
+                </div>
+
+                
+                  <div class="facebook-btn">
+                    <button type="submit" class="btn btn-primary mt-3 "> <i class="fab fa-facebook-f me-2"></i> Facebook</button>
+                  </div> 
+                  <div class="google-btn">
+                    <button type="submit" class=" btn btn-primary mt-3 " id="google-btn"> <i class="fab fa-google me-2"></i> Google</button>
+                  </div>
+                  
+                
+                <div>
+                    <p class="acount-text small fw-bold">Do you have account? <a routerLink="/login"
+                        class="link">Sign in</a></p>
+                </div>
+                                            
+            </form>
+        </div>
+    </div> 
+</div>
