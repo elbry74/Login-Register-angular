@@ -24,20 +24,21 @@ export class RegisterComponent implements OnInit {
       username:['' , [Validators.required]],
       email:['' , [Validators.required , Validators.email]],
       password:['' , [Validators.required]],
-      
+
     })
   }
+
   signUp(){
     this._http.post<any>("http://localhost:3000/user" , this.userForm.value).subscribe(res =>{
       this.toaster.success("Account successfully created" , "" , {
-                  disableTimeOut: false,
-                  titleClass: "toastr_title",
-                  messageClass: "toastr_message",
-                  timeOut:3000,
-                  closeButton: true,
-                })
+      disableTimeOut: false,
+      titleClass: "toastr_title",
+      messageClass: "toastr_message",
+      timeOut:3000,
+      closeButton: true,
+      })
       this.userForm.reset();
-     this.router.navigate(['/login'])
+      this.router.navigate(['/login'])
 
     } , Err =>{
       alert("email already exists")
@@ -57,7 +58,7 @@ export class RegisterComponent implements OnInit {
 //       password:this.userForm.value.password,
 //     }
 
-    
+
 //     let index = this.users.findIndex(item => item.email == this.userForm.value.email)
 
 //     if(index !== -1){
@@ -78,7 +79,7 @@ export class RegisterComponent implements OnInit {
 //           closeButton: true,
 //         })
 //         this.router.navigate(['/home'])
-        
+
 //       })
 //     }
 
