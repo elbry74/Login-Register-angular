@@ -26,35 +26,8 @@ export class LoginComponent implements OnInit {
       email:['' , [Validators.required , Validators.email]],
       password:['' , [Validators.required]],
     })
-  } 
-  // signIn(){
-  //   this._http.get<any>("http://localhost:3000/user").subscribe(res =>{
-  //     const user = res.find((a:any) =>{
-  //       return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
-  //     })
-  //     if(user){
-  //       this.toaster.success("Login is successfully" , "" , {
-  //         disableTimeOut: false,
-  //         titleClass: "toastr_title",
-  //         messageClass: "toastr_message",
-  //         timeOut:3000,
-  //         closeButton: true,
-  //         })
-  //         this.loginForm.reset();
-  //         this.router.navigate(['/home'])
-  //     } else{
-  //       this.toaster.error("User not found" , "" , {
-  //                 disableTimeOut: false,
-  //                 titleClass: "toastr_title",
-  //                 messageClass: "toastr_message",
-  //                 timeOut:3000,
-  //                 closeButton: true,
-  //               })
-  //     }
-  //   }, Err =>{
-  //     alert("email already exists")
-  //   })
-  // }
+  }
+
   getUsers() {
     this.service.getUsers().subscribe((res:any) => {
       this.users.push = res
@@ -69,7 +42,7 @@ export class LoginComponent implements OnInit {
 
     let index = this.users.findIndex(item => item.email == this.loginForm.value.email && item.password == this.loginForm.value.password  )
     if(index == -1) {
-      this.toaster.error("الايميل او كلمة المرور غير صحيحة" , "" , {
+      this.toaster.error("email not found" , "" , {
         disableTimeOut: false,
         titleClass: "toastr_title",
         messageClass: "toastr_message",
@@ -78,7 +51,7 @@ export class LoginComponent implements OnInit {
       })
       console.log(index)
     }else {
-        this.toaster.success("تم تسجيل الدخول بنجاح" , "" , {
+        this.toaster.success("logged successfully" , "" , {
           disableTimeOut: false,
           titleClass: "toastr_title",
           messageClass: "toastr_message",

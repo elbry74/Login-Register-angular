@@ -16,7 +16,6 @@ export class RegisterComponent implements OnInit {
   constructor(private fb:FormBuilder ,private service:AuthService  , private _http:HttpClient ,  private router:Router , private toaster:ToastrService) { }
   ngOnInit(): void {
     this.createForm()
-    // this.uesrsDetails()
   }
 
   createForm() {
@@ -44,44 +43,4 @@ export class RegisterComponent implements OnInit {
       alert("email already exists")
     })
   }
-
-// uesrsDetails(){
-//   this.service.getUsers().subscribe((res:any) =>{
-//     this.users.push = res
-//     console.log(res)
-//   })
-// }
-//   submit(){
-//     const model ={
-//       username:this.userForm.value.username,
-//       email:this.userForm.value.email,
-//       password:this.userForm.value.password,
-//     }
-
-
-//     let index = this.users.findIndex(item => item.email == this.userForm.value.email)
-
-//     if(index !== -1){
-//       this.toaster.error("email already exists" , "" , {
-//         disableTimeOut: false,
-//         titleClass: "toastr_title",
-//         messageClass: "toastr_message",
-//         timeOut:3000,
-//         closeButton: true,
-//       })
-//     } else{
-//       this.service.createUser(model).subscribe((res:any) =>{
-//         this.toaster.success("Account successfully created" , "" , {
-//           disableTimeOut: false,
-//           titleClass: "toastr_title",
-//           messageClass: "toastr_message",
-//           timeOut:3000,
-//           closeButton: true,
-//         })
-//         this.router.navigate(['/home'])
-
-//       })
-//     }
-
-//   }
 }
